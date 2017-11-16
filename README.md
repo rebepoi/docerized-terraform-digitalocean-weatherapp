@@ -11,12 +11,12 @@ Copy paste token in modify-me.sh file to APITOKEN variable
 APITOKEN="token goes here"
 ```
 
-Navigate inside folder and run build, tag name is just for example.
+Navigate inside folder and run build, tag name 'terra' is just for example.
 ```
 docker build -t terra .
 ```
 
-After build go inside freshly build image.
+After build go inside freshly build image. (if you changed terra in last command to something else use it here insted terra)
 ```
 docker run -it --entrypoint=sh terra
 ```
