@@ -43,7 +43,8 @@ resource "digitalocean_droplet" "weatherapp" {
    "docker build -t forecast_front ./frontend/",
    "docker build -t forecast_back ./backend/",
    "docker swarm init --advertise-addr ${digitalocean_droplet.weatherapp.ipv4_address}",
-   "docker stack deploy -c docker-compose.yml weatherapp"
+#   "docker stack deploy -c docker-compose.yml weatherapp"
+    "docker-compose up -d"
   ]
  }
 }
