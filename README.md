@@ -6,9 +6,9 @@ Clone or download repository.
 
 Create DigitalOcean API token, token must be read and write HOWTO: https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2
 
-Copy paste token in modify-me.sh file to APITOKEN variable
+Copy paste token in terraform.tfvars file to do_token variable and save the file
 ```
-APITOKEN="token goes here"
+do_token = "api_key"
 ```
 
 Navigate inside folder and run build, tag name 'terra' is just for example.
