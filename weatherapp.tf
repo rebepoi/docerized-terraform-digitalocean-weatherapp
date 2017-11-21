@@ -10,7 +10,7 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_ssh_key" "default" {
-  name       = "weatherapp_key2"
+  name       = "weatherapp_key"
   public_key = "${file(var.pub_key)}"
 }
 
