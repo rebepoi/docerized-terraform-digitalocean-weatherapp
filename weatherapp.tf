@@ -10,7 +10,7 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_ssh_key" "default" {
-  name       = "weatherapp_key"
+  name       = "weatherapp_key2"
   public_key = "${file(var.pub_key)}"
 }
 
@@ -39,12 +39,8 @@ resource "digitalocean_droplet" "weatherapp" {
    "curl -L https://github.com/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose",
    "chmod +x /usr/local/bin/docker-compose",
    "cd forecast",
-   "sed -i -e 's/0.0.0.0:9000/${digitalocean_droplet.weatherapp.ipv4_address}:9000/g' ./frontend/webpack.config.js"
-   "docker build -t forecast_front ./frontend/",
-   "docker build -t forecast_back ./backend/",
-   "docker swarm init --advertise-addr ${digitalocean_droplet.weatherapp.ipv4_address}",
-#   "docker stack deploy -c docker-compose.yml weatherapp"
-    "docker-compose up -d"
+   "sed -i -e 's/0.0.0.0:9000/${digitalocean_droplet.weatherapp.ipv4_address}:9000/g' ./frontend/webpack.config.js",
+   "docker-compose up -d"
   ]
  }
 }
