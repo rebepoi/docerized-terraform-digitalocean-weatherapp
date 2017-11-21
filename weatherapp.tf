@@ -20,7 +20,6 @@ resource "digitalocean_droplet" "weatherapp" {
   name   = "weatherapp"
   region = "ams2"
   size   = "512mb"
-#  user_data = "#cloud-config\n\nssh_authorized_keys:\n — \"${file("${var.pub_key}")}\"\n"
   ssh_keys = [
   "${var.ssh_fingerprint}"
   ]
