@@ -14,8 +14,8 @@ WORKDIR $GOPATH/src/github.com/hashicorp/terraform
 RUN git clone https://github.com/hashicorp/terraform.git ./ && \
     git checkout v${TERRAFORM_VERSION} && \
     /bin/bash scripts/build.sh && \
-    chmod +x /go/modify-me.sh && \
-    /bin/bash /go/modify-me.sh
+    chmod +x /go/fingerprint.sh && \
+    /bin/bash /go/fingerprint.sh
 
 WORKDIR $GOPATH
 ENTRYPOINT ["terraform"]
