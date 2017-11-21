@@ -19,7 +19,7 @@ resource "digitalocean_droplet" "weatherapp" {
   image  = "docker-16-04"
   name   = "weatherapp"
   region = "ams2"
-  size   = "512mb"
+  size   = "1gb"
   ssh_keys = [
   "${var.ssh_fingerprint}"
   ]
