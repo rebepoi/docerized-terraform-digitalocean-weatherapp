@@ -2,7 +2,10 @@
 Docker CE or EE (I use CE) installed on system. Can be found from here: https://www.docker.com
 
 # Instructions
-Clone or download repository.
+Clone or download repository. To clone this branch use below command: 
+```
+git clone -b with-swarm --single-branch https://github.com/rebepoi/docerized-terraform-digitalocean-weatherapp
+```
 
 Create DigitalOcean API token, token must be read and write HOWTO: https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2
 
