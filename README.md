@@ -43,4 +43,4 @@ Error: Error applying plan:
 ```
 That means that digitalocean has not updated your private key yet, just wait few seconds and run terraform apply again.
 
-When redy terraform will output droplets ip and if you copy paste it in web browser, you can see current weather in Tampere :)
+When redy terraform will output droplets ip and if you copy paste it in web browser, you can see 3h forecast based on your ip. :)
